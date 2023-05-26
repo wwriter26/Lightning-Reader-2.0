@@ -1,0 +1,203 @@
+html{
+  font-size: 150%;
+}
+
+body
+{
+  background-color: rgb(25,25,25);
+  color:white;
+  font-family: 'Times New Roman';
+}
+
+/* --> */
+/* Title and the Logo */
+.title
+{
+  height:200px;
+}
+/* <-- */
+
+.text-box
+{
+  margin-top: 0px;
+  margin-bottom: 15px;
+  border:none;
+  padding-top:15px;
+  padding-bottom: 15px;
+  width: 300px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.js-button
+{
+  padding:15px;
+  color: white;
+  background-color: rgb(10, 106, 232);
+  /* border:none; */
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.arrow-image
+{
+  height: 60px;
+  padding-left:110px;
+}
+
+.number1-buttons,
+.number2-buttons,
+.number3-buttons,
+.number4-buttons,
+.number5-buttons,
+.number6-buttons,
+.number7-buttons,
+.number8-buttons,
+.number9-buttons,
+.number10-buttons,
+.number11-buttons,
+.number12-buttons,
+.number13-buttons,
+.number14-buttons,
+.number15-buttons
+{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.number1-buttons{
+  background-color: white;
+}
+.number2-buttons{
+  background-color: lightblue;
+}
+.number3-buttons{
+  background-color: rgb(170, 170, 233);
+}
+.number4-buttons{
+  background-color: rgb(119, 238, 238);
+}
+.number5-buttons{
+  background-color: rgb(99, 174, 221);
+}
+.number6-buttons{
+  background-color: rgb(167, 227, 167);
+}
+.number7-buttons{
+  background-color: rgb(105, 217, 105);
+}
+.number8-buttons{
+  background-color: rgb(80, 177, 80);
+
+}
+.number9-buttons{
+  background-color: rgb(13, 129, 13);
+}
+.number10-buttons{
+  background-color: yellow;
+}
+.number11-buttons{
+ background-color: rgb(255, 196, 0);
+}
+.number12-buttons{
+  background-color: rgb(255, 123, 0);
+}
+.number13-buttons{
+  background-color: rgb(255, 81, 0);
+}
+.number14-buttons{
+  background-color: red;
+}
+.number15-buttons{
+  background-color: darkred;
+}
+
+.js-start-reading-button{
+  padding: 15px;
+  border-radius: 50px;
+  background-color: rgb(10, 106, 232);
+  font-weight: bold;
+  margin-top: 30px;
+  color:white;
+  font-size: 15px;
+
+}
+
+.shortCut
+{
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.preferences
+{
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 30px;
+  padding-bottom: 15px;
+}
+
+.space,
+.r-key,
+.punctuation
+{
+  padding-left: 20px;
+  font-size: 20px ;
+}
+
+
+
+/* displaying countdown & array words to screen */
+
+.countdown
+{
+  font-size: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.displayed-array
+{
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.left-space,
+.left-r-key {
+  font-size: 20px;
+  text-align: right;
+  display: inline;
+  padding-left: 20px;
+  font-weight: bold;
+}
+
+.right-space,
+.right-r-key {
+
+  text-align: left;
+  display: inline;
+  padding-left: 5px;
+  font-size: 80%;
+
+}
+
+.return{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  height:50vh;
+  color:white;
+  font-size: 30px;
+}
