@@ -134,7 +134,7 @@ body
   border-radius: 50px;
   background-color: rgb(10, 106, 232);
   font-weight: bold;
-  margin-top: 30px;
+  margin-top: 20px;
   color:white;
   font-size: 15px;
 
@@ -156,11 +156,11 @@ body
   padding-bottom: 15px;
 }
 
-.space,
-.r-key,
+.space-R,
 .punctuation
 {
   padding-left: 20px;
+  padding-bottom: 15px;
   font-size: 20px ;
 }
 
@@ -212,4 +212,58 @@ body
   height:50vh;
   color:white;
   font-size: 30px;
+}
+
+.reading-space-image{
+  width: 150px; 
+  height: auto;
+  cursor: pointer;
+  background-color: white;
+  border:none; 
+  position: absolute;
+  top: 500px;
+  left: 550px;
+  border-radius: 10px;
+}
+/* getting rid of mystery button */
+.reading-space-button-background{
+ background-color: rgb(25,25,25);
+ border: none;
+}
+
+.space-key{
+  position: absolute;
+  top: 510px;
+  left: 575px;
+  color:black;
+  font-size: 30px;
+  font-weight: bold;
+  pointer-events: none;
+}
+
+.reading-r-image{
+  width: 150px; 
+  height: auto;
+  cursor: pointer;
+  background-color: white;
+  border:none; 
+  position: absolute;
+  top: 500px;
+  left: 820px;
+  border-radius: 10px;
+}
+/* getting rid of mystery button */
+.reading-r-button-background{
+ background-color: rgb(25,25,25);
+ border: none;
+}
+
+.r-key{
+  position: absolute;
+  top: 510px;
+  left: 825px;
+  color:black;
+  font-weight: bold;
+  font-size: 30px;
+  pointer-events: none;
 }
