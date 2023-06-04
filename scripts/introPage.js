@@ -1,5 +1,6 @@
 //getting the users input and storing it in a global var
 //and making them into all caps.
+
 const buttonElement = document.querySelector('.js-start-reading-button');
 let userInput =''; 
 let userArray = [];
@@ -41,7 +42,7 @@ const readingButtonEm = document.querySelector('.js-start-reading-button');
   const read1EM = document.querySelector('.number1-buttons');
   read1EM.addEventListener('click', () => {
     clicked1 = true;
-    console.log(clicked1);
+    // console.log(clicked1);
   });
 
   let clicked2 = false;
@@ -49,7 +50,7 @@ const readingButtonEm = document.querySelector('.js-start-reading-button');
   read2EM.addEventListener('click', () => {
     clicked1 = false;
     clicked2 = true;
-    console.log(clicked2);
+    // console.log(clicked2);
   });
   
   let clicked3 = false;
@@ -58,7 +59,7 @@ const readingButtonEm = document.querySelector('.js-start-reading-button');
     clicked1 = false;
     clicked2 = false;
     clicked3 = true;
-    console.log(clicked3);
+    // console.log(clicked3);
   });
 
   let clicked4 = false;
@@ -68,7 +69,7 @@ const readingButtonEm = document.querySelector('.js-start-reading-button');
     clicked2 = false;
     clicked3 = false;
     clicked4 = true;
-    console.log(clicked4);
+    // console.log(clicked4);
   });
 
   let clicked5 = false;
@@ -79,7 +80,7 @@ const readingButtonEm = document.querySelector('.js-start-reading-button');
     clicked3 = false;
     clicked4 = false;
     clicked5 = true;
-    console.log(clicked5);
+    // console.log(clicked5);
   });
 
   let clicked6 = false;
@@ -91,7 +92,7 @@ const readingButtonEm = document.querySelector('.js-start-reading-button');
     clicked4 = false;
     clicked5 = false;
     clicked6 = true;
-    console.log(clicked6);
+    // console.log(clicked6);
   });
 
   let clicked7 = false;
@@ -104,7 +105,7 @@ const readingButtonEm = document.querySelector('.js-start-reading-button');
     clicked5 = false;
     clicked6 = false;
     clicked7 = true;
-    console.log(clicked7);
+    // console.log(clicked7);
   });
 
   let clicked8 = false;
@@ -118,7 +119,7 @@ const readingButtonEm = document.querySelector('.js-start-reading-button');
     clicked6 = false;
     clicked7 = false;
     clicked8 = true;
-    console.log(clicked8);
+    // console.log(clicked8);
   });
 
   let clicked9 = false;
@@ -133,7 +134,7 @@ const readingButtonEm = document.querySelector('.js-start-reading-button');
     clicked7 = false;
     clicked8 = false;
     clicked9 = true;
-    console.log(clicked9);
+    // console.log(clicked9);
   });
 
   let clicked10 = false;
@@ -150,7 +151,7 @@ const readingButtonEm = document.querySelector('.js-start-reading-button');
     clicked9 = false;
     clicked10 = true;
   
-    console.log(clicked10);
+    // console.log(clicked10);
   });
 
   let clicked11 = false;
@@ -168,7 +169,7 @@ const readingButtonEm = document.querySelector('.js-start-reading-button');
     clicked10 = false;
     clicked11 = true;
  
-    console.log(clicked11);
+    // console.log(clicked11);
   });
 
   let clicked12 = false;
@@ -186,7 +187,7 @@ const readingButtonEm = document.querySelector('.js-start-reading-button');
     clicked10 = false;
     clicked11 = false;
     clicked12 = true;
-    console.log(clicked12);
+    // console.log(clicked12);
   });
 
   let clicked13 = false;
@@ -205,7 +206,7 @@ const readingButtonEm = document.querySelector('.js-start-reading-button');
     clicked11 = false;
     clicked12 = false;
     clicked13 = true;
-    console.log(clicked13);
+    // console.log(clicked13);
   });
 
   let clicked14 = false;
@@ -225,7 +226,7 @@ const readingButtonEm = document.querySelector('.js-start-reading-button');
     clicked12 = false;
     clicked13 = false;
     clicked14 = true;
-    console.log(clicked14);
+    // console.log(clicked14);
   });
   
   let clicked15 = false;
@@ -246,7 +247,7 @@ const readingButtonEm = document.querySelector('.js-start-reading-button');
     clicked13 = false;
     clicked14 = false;
     clicked15 = true;
-    console.log(clicked15);
+    // console.log(clicked15);
   });
   
 //<--
@@ -263,12 +264,12 @@ let check1True = false;
 check1.addEventListener('change',function() {
   if(this.checked) //if the box is checked
   {
-    console.log('Checkbox is selected');
+    // console.log('Checkbox is selected');
     check1True = true;
   }
   else //if box is not checked
   {
-    console.log('checkbox is not selected');
+    // console.log('checkbox is not selected');
     check1True = false;
   }
 });
@@ -279,12 +280,12 @@ let check2True = false;
 check2.addEventListener('change',function() {
   if(this.checked) //if the box is checked
   {
-    console.log('Checkbox 2 is selected');
+    // console.log('Checkbox 2 is selected');
     check2True = true;
   }
   else //if box is not checked
   {
-    console.log('Checkbox 2 is not selected');
+    // console.log('Checkbox 2 is not selected');
     check2True = false;
   }
 });
@@ -310,31 +311,12 @@ function changeIntervalTime(condition, newTime)
 
     intervalId = setInterval(function(){
     
-    if(check2True){
-      document.body.innerHTML = '<div class="displayed-array">' + userArray[index] + '</div>' + '<button class="reading-space-button-background"><img class="reading-space-image" src="Images/space.png"> <div class="space-key">PAUSE</div></button>' + '<button class="reading-r-button-background"><img class="reading-r-image" src="Images/space.png"><div class="r-key">RESTART</div></button>';
-      const pauseElm = document.querySelector('.reading-space-image');
-      const restartElm = document.querySelector('.reading-r-image');
-      // let pauseCount = 0;
-      restartElm.addEventListener('click',() => {
-        rKey();
-      });
-
-      pauseElm.addEventListener('click',() => {
-        pauseCount++;
-        if(!(pauseCount % 2 === 0)){
-          console.log('should be paused')
-          pauseInterval();
-        }
-        else{
-          console.log('should be unpaused')
-          resumeInterval();
-        }
-      });
-      
-    }else{
-      document.body.innerHTML = '<div class="displayed-array">' + userArray[index] + '</div>';
-    }
-    index++;
+      if(check2True){
+        document.body.innerHTML = '<div class="container">' + '<div class="displayed-array">' + userArray[index] + '</div>' + '<button class="reading-space-button-background"><img class="reading-space-image" src="Images/space.png"> <div class="space-key">PAUSE</div></button>' + '<button class="reading-r-button-background"><img class="reading-r-image" src="Images/space.png"><div class="r-key">RESTART</div></button>' + '</div>';
+      }else{
+        document.body.innerHTML = '<div class="displayed-array">' + userArray[index] + '</div>';
+      }
+      index++;
       //-->
       // if(twoInRow)
       // {
@@ -351,10 +333,10 @@ function changeIntervalTime(condition, newTime)
 let newTime;
 let commaIndex;
 let tempCheck1;
-let pauseCount;
 
 //let twoInRow = false;
 let finalButton;
+let pause = false;
 function normalTime()
 {
 
@@ -400,12 +382,12 @@ function normalTime()
         spaceCount++;
       }
       if((event.code === "space" || event.key === " ") && !(spaceCount % 2 === 0)){
-        console.log("space key pressed.. should pause");
+        // console.log("space key pressed.. should pause");
         pauseInterval();
       }
       else if((event.code === "space" || event.key === " " )&& spaceCount % 2 === 0)
       {
-        console.log("space key pressed.. should unpause");
+        // console.log("space key pressed.. should unpause");
         resumeInterval();
       }
     });
@@ -441,23 +423,23 @@ function normalTime()
       tempCheck1 = true;
       changeIntervalTime(tempCheck1, newTime);
     }
+
     if(check2True){
-      document.body.innerHTML = '<div class="displayed-array">' + userArray[index] + '</div>' + '<button class="reading-space-button-background"><img class="reading-space-image" src="Images/space.png"> <div class="space-key">PAUSE</div></button>' + '<button class="reading-r-button-background"><img class="reading-r-image" src="Images/space.png"><div class="r-key">RESTART</div></button>';
+      document.body.innerHTML = '<div class="container">' + '<div class="displayed-array">' + userArray[index] + '</div>' + '<button class="reading-space-button-background"><img class="reading-space-image" src="Images/space.png"> <div class="space-key">PAUSE</div></button>' + '<button class="reading-r-button-background"><img class="reading-r-image" src="Images/space.png"><div class="r-key">RESTART</div></button>' + '</div>';
       const pauseElm = document.querySelector('.reading-space-image');
       const restartElm = document.querySelector('.reading-r-image');
-      pauseCount = 0;
-      restartElm.addEventListener('click',() => {
+      
+      restartElm.addEventListener('mousedown',() => {
         rKey();
       });
-
-      pauseElm.addEventListener('click',() => {
-        pauseCount++;
-        if(!(pauseCount % 2 === 0)){
+      
+      pauseElm.addEventListener('mousedown',() => {
+        // console.log('hi');
+        if(pause === false){
+          pause = true;
           pauseInterval();
-          console.log('should be paused')
-        }
-        else{
-          console.log('should be unpaused')
+        }else{
+          pause = false;
           resumeInterval();
         }
       });
