@@ -273,6 +273,24 @@ check1.addEventListener('change',function() {
   }
 });
 
+//adding a button for space and r-key mobile users
+const check2 = document.getElementById('check-2');
+let check2True = false;
+check2.addEventListener('change',function() {
+  if(this.checked) //if the box is checked
+  {
+    console.log('Checkbox 2 is selected');
+    check2True = true;
+  }
+  else //if box is not checked
+  {
+    console.log('Checkbox 2 is not selected');
+    check2True = false;
+  }
+});
+
+
+
 var intervalId;
 function changeIntervalTime(condition, newTime)
 {
@@ -291,7 +309,31 @@ function changeIntervalTime(condition, newTime)
     clearInterval(intervalId);  
 
     intervalId = setInterval(function(){
-    document.body.innerHTML = '<div class="displayed-array">' + userArray[index] + '</div>';
+    
+    if(check2True){
+      document.body.innerHTML = '<div class="displayed-array">' + userArray[index] + '</div>' + '<button class="reading-space-button-background"><img class="reading-space-image" src="Images/space.png"> <div class="space-key">PAUSE</div></button>' + '<button class="reading-r-button-background"><img class="reading-r-image" src="Images/space.png"><div class="r-key">RESTART</div></button>';
+      const pauseElm = document.querySelector('.reading-space-image');
+      const restartElm = document.querySelector('.reading-r-image');
+      // let pauseCount = 0;
+      restartElm.addEventListener('click',() => {
+        rKey();
+      });
+
+      pauseElm.addEventListener('click',() => {
+        pauseCount++;
+        if(!(pauseCount % 2 === 0)){
+          console.log('should be paused')
+          pauseInterval();
+        }
+        else{
+          console.log('should be unpaused')
+          resumeInterval();
+        }
+      });
+      
+    }else{
+      document.body.innerHTML = '<div class="displayed-array">' + userArray[index] + '</div>';
+    }
     index++;
       //-->
       // if(twoInRow)
@@ -309,6 +351,7 @@ function changeIntervalTime(condition, newTime)
 let newTime;
 let commaIndex;
 let tempCheck1;
+let pauseCount;
 
 //let twoInRow = false;
 let finalButton;
@@ -398,7 +441,30 @@ function normalTime()
       tempCheck1 = true;
       changeIntervalTime(tempCheck1, newTime);
     }
-    document.body.innerHTML = '<div class="displayed-array">' + userArray[index] + '</div>';
+    if(check2True){
+      document.body.innerHTML = '<div class="displayed-array">' + userArray[index] + '</div>' + '<button class="reading-space-button-background"><img class="reading-space-image" src="Images/space.png"> <div class="space-key">PAUSE</div></button>' + '<button class="reading-r-button-background"><img class="reading-r-image" src="Images/space.png"><div class="r-key">RESTART</div></button>';
+      const pauseElm = document.querySelector('.reading-space-image');
+      const restartElm = document.querySelector('.reading-r-image');
+      pauseCount = 0;
+      restartElm.addEventListener('click',() => {
+        rKey();
+      });
+
+      pauseElm.addEventListener('click',() => {
+        pauseCount++;
+        if(!(pauseCount % 2 === 0)){
+          pauseInterval();
+          console.log('should be paused')
+        }
+        else{
+          console.log('should be unpaused')
+          resumeInterval();
+        }
+      });
+
+    }else{
+      document.body.innerHTML = '<div class="displayed-array">' + userArray[index] + '</div>';
+    }
     index++;
   },userTime);
 }
@@ -523,4 +589,23 @@ function resumeInterval() {
 function reloadPage()
 {
   location.reload();
+}
+
+function rKey()
+{
+  clearInterval(intervalId);
+  index = 0;
+  document.body.innerHTML = '<div class="countdown">3</div>'; //clears the screen
+  setTimeout(function()
+  {
+    document.body.innerHTML = '<div class="countdown">2</div>';
+  },1000);
+  setTimeout(function()
+  {
+    document.body.innerHTML = '<div class="countdown">1</div>';
+  },2000);
+  setTimeout(function()
+  {
+    normalTime();
+  },3000);
 }
