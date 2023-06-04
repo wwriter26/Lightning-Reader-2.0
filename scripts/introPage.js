@@ -14,6 +14,9 @@ buttonElement.addEventListener('click',() => {
   let count = 0;
   for(let i = 0; i < userInput.length;i++)
   {
+    if(userInput[i] === ' ' && userInput[i-1] === ' '){
+      continue;
+    }
     if(userInput[i] === ' ')
     {
       userArray[count] = tempString;
