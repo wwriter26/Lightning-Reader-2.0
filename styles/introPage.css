@@ -221,8 +221,9 @@ body
   background-color: white;
   border:none; 
   position: absolute;
-  top: 500px;
-  left: 550px;
+  top: 63.8%;
+  /* left: 550px; */
+  left:35.7%;
   border-radius: 10px;
 }
 /* getting rid of mystery button */
@@ -233,8 +234,9 @@ body
 
 .space-key{
   position: absolute;
-  top: 510px;
-  left: 575px;
+  top: 65%;
+  /* left: 575px; */
+  left: 37.4%;
   color:black;
   font-size: 30px;
   font-weight: bold;
@@ -248,8 +250,9 @@ body
   background-color: white;
   border:none; 
   position: absolute;
-  top: 500px;
-  left: 820px;
+  top: 63.8%;
+  /* left: 820px; */
+  left: 54.7%;
   border-radius: 10px;
 }
 /* getting rid of mystery button */
@@ -260,8 +263,9 @@ body
 
 .r-key{
   position: absolute;
-  top: 510px;
-  left: 825px;
+  top: 65%;
+  /* left: 825px; */
+  left: 55%;
   color:black;
   font-weight: bold;
   font-size: 30px;
